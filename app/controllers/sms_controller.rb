@@ -2,8 +2,8 @@ class SmsController < ApplicationController
   def index; end
 
   def send_sms
-    number = params [:number]
-    message = params [:message]
+    number = params[:number]
+    message = params[:message]
 
     begin
       send_with_net_http(number, message)
